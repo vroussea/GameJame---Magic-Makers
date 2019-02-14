@@ -1,16 +1,14 @@
 import contextlib
 
+from os import environ
+
 with contextlib.redirect_stdout(None):
-    pass
+    import pygame
 from pygame import *
 
 from game.classes.character import Character
 
-# Put the window at the center of the screen (for debug)
-
-import pygame, os
-
-os.environ['SDL_VIDEO_CENTERED'] = '1'
+environ['SDL_VIDEO_CENTERED'] = '1'
 
 def main():
     pygame.init()
